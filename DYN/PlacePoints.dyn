@@ -30,13 +30,42 @@
       "Description": "Allows for DesignScript code to be authored directly"
     },
     {
-      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
-      "NodeType": "FunctionNode",
-      "FunctionSignature": "Autodesk.DesignScript.Geometry.Point.ByCoordinates@double,double",
-      "Id": "84e48962fa004035a212374d096c7fb0",
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "bd452e844eb44721a0c1dc980308dc43",
       "Inputs": [
         {
-          "Id": "749f896df37b4f6982d43aa16c26796e",
+          "Id": "6b83d8999f9144bf87bcb83aa968844f",
+          "Name": "",
+          "Description": "Node to show output from",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "65d4a90d1e9c405c87940f357a8a892e",
+          "Name": "",
+          "Description": "Node output",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualize the node's output"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Point.ByCoordinates@double,double,double",
+      "Id": "2975630de50c46389107d761f1a958a1",
+      "Inputs": [
+        {
+          "Id": "858ac472c99f4f2195b30b974dc8aca4",
           "Name": "x",
           "Description": "X coordinate\n\ndouble\nDefault value : 0",
           "UsingDefaultValue": true,
@@ -45,9 +74,18 @@
           "KeepListStructure": false
         },
         {
-          "Id": "9f8a6f97b0b64383b156e1e259cac27b",
+          "Id": "90048cf50e1e4772a996242b6d244763",
           "Name": "y",
           "Description": "Y coordinate\n\ndouble\nDefault value : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c035abee8eaf4806a3b4ab596120e4ab",
+          "Name": "z",
+          "Description": "Z coordinate\n\ndouble\nDefault value : 0",
           "UsingDefaultValue": true,
           "Level": 2,
           "UseLevels": false,
@@ -56,7 +94,7 @@
       ],
       "Outputs": [
         {
-          "Id": "4845c4eb2ab845ae86e5f2d72af3ec4c",
+          "Id": "ef353156be5047c7aa98656e5c0efd40",
           "Name": "Point",
           "Description": "Point created by coordinates",
           "UsingDefaultValue": false,
@@ -66,14 +104,32 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "Form a Point in the XY plane given two 2 cartesian coordinates. The Z component is 0.\n\nPoint.ByCoordinates (x: double = 0, y: double = 0): Point"
+      "Description": "Form a Point given 3 cartesian coordinates\n\nPoint.ByCoordinates (x: double = 0, y: double = 0, z: double = 0): Point"
     }
   ],
   "Connectors": [
     {
       "Start": "50324fbe2aa04b9fa1888419c8c6b04d",
-      "End": "749f896df37b4f6982d43aa16c26796e",
-      "Id": "0532c384e1544183be36ff21fe46729f",
+      "End": "858ac472c99f4f2195b30b974dc8aca4",
+      "Id": "2efbae8e75a345a68fa117328508262f",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "50324fbe2aa04b9fa1888419c8c6b04d",
+      "End": "90048cf50e1e4772a996242b6d244763",
+      "Id": "dc186b8952cb43fb85329d5da73e2337",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "50324fbe2aa04b9fa1888419c8c6b04d",
+      "End": "c035abee8eaf4806a3b4ab596120e4ab",
+      "Id": "ebec59ff56fe4b3dbddd1bd6ced31f79",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "ef353156be5047c7aa98656e5c0efd40",
+      "End": "6b83d8999f9144bf87bcb83aa968844f",
+      "Id": "8fd4e628bf974bc0b4a7f111a6e3fb7f",
       "IsHidden": "False"
     }
   ],
@@ -127,18 +183,28 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 69.199999999999989,
-        "Y": 214.39999999999998
+        "X": 66.800000000000011,
+        "Y": 201.59999999999997
+      },
+      {
+        "Name": "Watch",
+        "ShowGeometry": true,
+        "Id": "bd452e844eb44721a0c1dc980308dc43",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 671.20000000000027,
+        "Y": 200.0
       },
       {
         "Name": "Point.ByCoordinates",
         "ShowGeometry": true,
-        "Id": "84e48962fa004035a212374d096c7fb0",
+        "Id": "2975630de50c46389107d761f1a958a1",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 359.19999999999993,
-        "Y": 214.39999999999998
+        "X": 331.2,
+        "Y": 246.40000000000003
       }
     ],
     "Annotations": [],
